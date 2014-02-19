@@ -1,12 +1,24 @@
-
 <tbody>
-    <% @results.results.each do |result| %>
-    <p>
-      <tr>
-        <td><%= result.name %></td>
-        <td><%= result.description %></td>
-      </tr>
-      </p>
-    <% end %>
-  </tbody>
+	<% @results.results.each do |result| %>
+	<p>
+		<tr>
+			<td><%= result.name %></td>
+			<td><%= result.description %></td>
+		</tr>
+	</p>
+	<% end %>
+</tbody>
+<p>
+<form action="/search" method="post">
+Search Query : <input type="text" name="search">
+<br>
+Price From :<input type="text" name="price_from">
+<br>
+Price To: <input type="text" name="price_to">
+<br>
 
+<input type="submit">
+
+
+</form>
+</p>

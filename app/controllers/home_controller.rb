@@ -21,6 +21,6 @@ class HomeController < ApplicationController
   			q.with(:category_id,params[:id].to_i)
   		end
   	end
-  	binding.pry
+  	#binding.pry
   end
 end
