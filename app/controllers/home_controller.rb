@@ -5,7 +5,6 @@ class HomeController < ApplicationController
   end
 
   def search
-
   	@results = Sunspot.search(Product,Category,SubCategory) do |q|
   		q.keywords params[:search]
 
@@ -13,13 +12,9 @@ class HomeController < ApplicationController
   			q.with(:price,params[:price_from].to_i..params[:price_to].to_i)
   		end
 
-  		if params[:from]=="sub_category"
-  			q.with(:sub_category_id,params[:id].to_i)
-  		end
+  		q.with(:sub_category_id,params[:id].to_i) if params[:from]=="sub_category"
+  		q.with(:category_id,params[:id].to_i) if params[:from]=="category"
 
-  		if params[:from]=="category"
-  			q.with(:category_id,params[:id].to_i)
-  		end
   	end
   	#binding.pry
   end
