@@ -1,6 +1,6 @@
 server "162.243.127.35", :app, :web, :db, :primary => true
 set :deploy_to, "/var/www/solr/"
-set :branch, 'UI'
+set :branch, 'master'
 set :scm_verbose, true
 set :use_sudo, false
 set :rails_env, "production" #added for delayed job 
