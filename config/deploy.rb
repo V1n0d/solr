@@ -8,6 +8,7 @@ set :repository, "git@github.com:V1n0d/solr.git"
 set :user, "root"
 set :scm_passphrase, ""
 set :branch, "master"
+set :default_shell, "/bin/bash -l"
 set :deploy_via, :copy
 set :stages, ["staging", "development", "production"]
 set :default_stage, "development"
