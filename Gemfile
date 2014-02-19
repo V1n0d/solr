@@ -53,6 +53,7 @@ gem 'pry'
 
 group :development do
     gem 'capistrano'
+    gem 'rvm-capistrano'
 end
 
 # Use debugger

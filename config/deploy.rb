@@ -1,3 +1,5 @@
+require "rvm/capistrano"
+require "bundler/capistrano"
 require 'capistrano/ext/multistage'
 
 set :application, 'Solr Sunspot Search'

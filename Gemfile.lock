@@ -135,6 +135,8 @@ GEM
     remotipart (1.2.1)
     rsolr (1.0.9)
       builder (>= 2.1.2)
+    rvm-capistrano (1.5.1)
+      capistrano (~> 2.15.4)
     safe_yaml (1.0.1)
     sass (3.2.14)
     sass-rails (4.0.1)
@@ -191,6 +193,7 @@ DEPENDENCIES
   pry
   rails (= 4.0.2)
   rails_admin
+  rvm-capistrano
   sass-rails (~> 4.0.0)
   sdoc
   sunspot_rails
