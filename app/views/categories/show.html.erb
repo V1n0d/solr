@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @category.description %>
+</p>
+
+<%@categories.each do |category | %>
+<p><a href="/sub_categories/<%= category.id %>"><%= category.name %></a></p>
+<%end %>
+
+<p>
+<form action="/search" method="post">
+Search Query : <input type="text" name="search">
+<br>
+Price From :<input type="text" name="price_from">
+<br>
+Price To: <input type="text" name="price_to">
+<br>
+<input type="hidden" name="from" value="category">
+<input type="hidden" name="id" value="<%=params[:id]%>">
+
+<input type="submit">
+
+
+</form>
+</p>
