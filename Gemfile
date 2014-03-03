@@ -38,6 +38,7 @@ gem 'devise'
 
 gem 'sunspot_rails'
 # This is an optional packaged Solr:
+gem 'sunspot_solr'
 
 gem 'pry'
 

@@ -28,6 +28,8 @@ after 'deploy:update_code' do
   # run "cd #{release_path} && rake db:create"
   run "cd #{release_path} && bundle exec rake db:create"
   run "cd #{release_path} && bundle exec rake db:migrate"
+  run "cd #{release_path} && bundle exec rake search:solr:start"
+  run "cd #{release_path} && bundle exec rake search:solr:reindex"
   # run "cd #{release_path} && rake db:seed"
   # run "cd #{release_path} && RAILS_ENV=production rake assets:precompile"
   # run "chown -R www-data:www-data #{release_path}/*"

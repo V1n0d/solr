@@ -3,8 +3,6 @@ class SubCategory < ActiveRecord::Base
 	has_many :products
 
 	searchable :auto_index=>true do 
-		text :name
-		text :description
 		integer :category_id
 	end
 end

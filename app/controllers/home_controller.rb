@@ -16,6 +16,6 @@ class HomeController < ApplicationController
   		q.with(:category_id,params[:id].to_i) if params[:from]=="category"
 
   	end
-  	#binding.pry
+    binding.pry
   end
 end
