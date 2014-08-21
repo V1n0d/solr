@@ -1,44 +1,45 @@
-ScreenCapture
+=ScreenCapture
 
 A standalone screen capturing service which will function independently for taking and providing the screenshot of the given http URL.
 
 
 
-How it works
 
-Screen Capturer service provides a simple REST API.
+=Screen Capturer service provides a simple REST API.
 
-Authentication
+==Authentication
 
 All the requests should be authenticated before the screenshot creation process.
 Client will be given an access token and a public key.
 
 Signature should be generated for the given api_key using the following REST call.
 
-POST /signature 
+ POST /signature 
 
-params: api_key
+params: 
+ api_key : 
 
-Response:  access token. 
+Response:  
+ access token : . 
 
 The resulted access token should be RSA encrypted with the given public key and passed in header for every single request.
 
-POST /capture
+ POST /capture
 
-Header :
-access_token : RSA encrypted value of the given access token 
+==Header :
+ access_token : RSA encrypted value of the given access token 
 
-Params :
-url : HTTP URL of the web page for which the screenshot needs to be taken.
-selector : CSS selector of the DOM element of which the screenshot needs to be taken. 
-( Defaults to ‘body’ tag )
-width : Width of the image to be outputted.
-height : Height of the image to be outputted.
+==Params :
+ url : HTTP URL of the web page for which the screenshot needs to be taken.
+ selector : CSS selector of the DOM element of which the screenshot needs to be taken. 
+ ( Defaults to ‘body’ tag )
+ width : Width of the image to be outputted.
+ height : Height of the image to be outputted.
 
-Response :
+==Response :
  image_url : image url of the screenshot for desired page.
 
-Architecture
+==Architecture
 Client application sends a request to the ScreenCapturer with the required params.
 Validity of the authentication will be tested.
 Selenium process the given url and takes a screenshot of it.
