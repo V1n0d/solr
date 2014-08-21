@@ -5,7 +5,7 @@ A standalone screen capturing service which will function independently for taki
 
 
 
-=Screen Capturer service provides a simple REST API.
+====Screen Capturer service provides a simple REST API.
 
 ==Authentication
 
@@ -16,27 +16,27 @@ Signature should be generated for the given api_key using the following REST cal
 
  POST /signature 
 
-params: 
+====params: 
  api_key : 
 
-Response:  
+====Response:  
  access token : . 
 
 The resulted access token should be RSA encrypted with the given public key and passed in header for every single request.
 
  POST /capture
 
-==Header :
+====Header :
  access_token : RSA encrypted value of the given access token 
 
-==Params :
+====Params :
  url : HTTP URL of the web page for which the screenshot needs to be taken.
  selector : CSS selector of the DOM element of which the screenshot needs to be taken. 
  ( Defaults to ‘body’ tag )
  width : Width of the image to be outputted.
  height : Height of the image to be outputted.
 
-==Response :
+====Response :
  image_url : image url of the screenshot for desired page.
 
 ==Architecture
