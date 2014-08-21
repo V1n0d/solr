@@ -24,6 +24,8 @@ Signature should be generated for the given api_key using the following REST cal
 
 The resulted access token should be RSA encrypted with the given public key and passed in header for every single request.
 
+==Screenshot
+
  POST /capture
 
 ====Header :
